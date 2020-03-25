@@ -1,0 +1,21 @@
+@import "@material/card/mdc-card";
+
+.roll{
+    &-card{
+        &__primary{
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__action-icons{
+            justify-content: space-evenly;
+            &--like{
+                color: green;
+            }
+            &--dislike{
+                color: red;
+            }
+        }
+    }
+}

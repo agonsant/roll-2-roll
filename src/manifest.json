@@ -1,0 +1,22 @@
+{
+    "short_name": "Roll2Roll",
+    "name": "Rolls love finder",
+    "description": "Web app for rolls to find its better half",
+    "icons": [
+      {
+        "src": "/images/icons-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icons-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#00796b",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#00796b"
+  }

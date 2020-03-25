@@ -1,0 +1,50 @@
+{
+  "name": "roll-2-roll",
+  "version": "1.0.0",
+  "description": "Web app for rolls to find its better half",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agonsant/roll-2-roll.git"
+  },
+  "private": true,
+  "keywords": [
+    "PWA",
+    "Web",
+    "JavaScript",
+    "Web Capabilities"
+  ],
+  "author": "Alex González",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agonsant/roll-2-roll/issues"
+  },
+  "homepage": "https://github.com/agonsant/roll-2-roll#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@material/card": "^5.1.0",
+    "@material/icon-button": "^5.1.0",
+    "@material/ripple": "^5.1.0",
+    "@material/theme": "^5.1.0",
+    "@material/top-app-bar": "^5.1.0",
+    "hammerjs": "^2.0.8",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "dart-sass": "^1.25.0",
+    "fibers": "^4.0.2",
+    "html-webpack-plugin": "^4.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

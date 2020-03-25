@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+$mdc-typography-font-family: unquote("Roboto, sans-serif");
+$mdc-shape-small-component-radius: 4px;
+$mdc-shape-medium-component-radius: 4px;
+$mdc-shape-large-component-radius: 0px;
+$mdc-theme-primary: #00796b;
+$mdc-theme-secondary: #018786;
+$mdc-theme-surface: #ffffff;
+$mdc-theme-background: #ffffff;
+$mdc-theme-error: #b00020;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #ffffff;
+$mdc-theme-on-error: #ffffff;
+$mdc-theme-on-surface: #000000;
+
+@import "~normalize.css";
+//@import "@material/ripple";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
+
+
+.header {
+    &__container{
+        position: inherit;
+    }
+}
+
+.roll{
+    &__container{
+        
+        & .card{
+            width: 320px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: 48px 0;
+            transform: translateX(-50%) translateY(-50%) scale(0.95);
+        }
+    }
+}
