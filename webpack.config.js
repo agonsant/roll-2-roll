@@ -17,22 +17,26 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Roll 2 Roll',
-            template: './src/index.html'
+            template: './src/index.html',
+            baseUrl: '/roll-2-roll/docs/'
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/offline/offline.html',
             chunks: [],
-            filename: './offline/index.html' 
+            filename: './offline/index.html',
+            baseUrl: '/roll-2-roll/docs/' 
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/404/not-found.html',
             chunks: [],
-            filename: './not-found/index.html' 
+            filename: './not-found/index.html',
+            baseUrl: '/roll-2-roll/docs/' 
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/share/share.html',
             chunks: [],
-            filename: './share-target/index.html' 
+            filename: './share-target/index.html',
+            baseUrl: '/roll-2-roll/docs/'
         }),
         new CopyPlugin([
             {
