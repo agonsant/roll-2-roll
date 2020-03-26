@@ -8,10 +8,10 @@ module.exports = {
     entry: './src/app.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'www'),
+        path: path.resolve(__dirname, 'docs'),
     },
     devServer: {
-        contentBase: './www'
+        contentBase: './docs'
     },
     plugins: [
         new CleanWebpackPlugin(),
