@@ -11,11 +11,25 @@ const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
   return new MDCRipple(el);
 });
 const cardContainer = document.querySelector('.roll__container');
-const carousel = new LikeCarousel(cardContainer,[
-  {name: 'Scottex', age: '1 día', url: `https://picsum.photos/320/320/?random=${Math.round(Math.random()*1000000)}`},
-  {name: 'Scottex', age: '2 día', url: `https://picsum.photos/320/320/?random=${Math.round(Math.random()*1000000)}`},
-  {name: 'Scottex', age: '3 día', url: `https://picsum.photos/320/320/?random=${Math.round(Math.random()*1000000)}`},
-  {name: 'Scottex', age: '4 día', url: `https://picsum.photos/320/320/?random=${Math.round(Math.random()*1000000)}`},
-  {name: 'Scottex', age: '5 día', url: `https://picsum.photos/320/320/?random=${Math.round(Math.random()*1000000)}`},
-  {name: 'Scottex', age: '6 día', url: `https://picsum.photos/320/320/?random=${Math.round(Math.random()*1000000)}`},
+const carousel = new LikeCarousel(cardContainer, [
+  { name: 'Scottex', age: '1 día', url: `/assets/images/roll-1.jpg` },
+  { name: 'Scottex', age: '2 día', url: `/assets/images/roll-2.jpg` },
+  { name: 'Scottex', age: '3 día', url: `/assets/images/roll-3.jpg` },
+  { name: 'Scottex', age: '4 día', url: `/assets/images/roll-4.jpg` },
+  { name: 'Scottex', age: '5 día', url: `/assets/images/roll-5.jpg` },
+  { name: 'Scottex', age: '6 día', url: `/assets/images/roll-6.jpg` },
 ]);
+
+
+function shareProfile(e) {
+  console.log(e);
+  if (navigator.share) {
+    navigator.share({
+      title: 'web.dev',
+      text: 'Check out web.dev.',
+      url: 'https://web.dev/',
+    })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  }
+};

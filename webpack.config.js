@@ -1,16 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: './src/app.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './docs'
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -18,6 +19,35 @@ module.exports = {
             title: 'Roll 2 Roll',
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/offline/offline.html',
+            chunks: [],
+            filename: './offline/index.html' 
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/404/not-found.html',
+            chunks: [],
+            filename: './not-found/index.html' 
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/share/share.html',
+            chunks: [],
+            filename: './share-target/index.html' 
+        }),
+        new CopyPlugin([
+            {
+              from: 'assets/**',
+              to: './'
+            },
+            {
+                from: 'src/sw.js',
+                to: './'
+            },
+            {
+                from: 'src/manifest.json',
+                to: './'
+            }
+          ]),
     ],
     module: {
         rules: [
