@@ -37,7 +37,7 @@
     "start_url": "/roll-2-roll/",
     "background_color": "#00796b",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/roll-2-roll/",
     "theme_color": "#00796b",
     "share_target": {
       "action": "/roll-to-roll/share-target/",
