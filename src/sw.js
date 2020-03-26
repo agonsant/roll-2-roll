@@ -66,7 +66,7 @@
 
 const cacheName = 'cache-v1';
 const precacheResources = [
-    '/',
+    './',
     'index.html',
     'offline/',
     'not-found/',
