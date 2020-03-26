@@ -34,13 +34,13 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/",
+    "start_url": "/roll-2-roll",
     "background_color": "#00796b",
     "display": "standalone",
     "scope": "/",
     "theme_color": "#00796b",
     "share_target": {
-      "action": "/share-target/",
+      "action": "/roll-to-roll/share-target/",
       "method": "GET",
       "params": {
         "title": "title",
