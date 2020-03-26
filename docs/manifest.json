@@ -34,7 +34,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/roll-2-roll",
+    "start_url": "/roll-2-roll/",
     "background_color": "#00796b",
     "display": "standalone",
     "scope": "/",
