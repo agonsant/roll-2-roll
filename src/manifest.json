@@ -40,7 +40,7 @@
     "scope": "/roll-2-roll/",
     "theme_color": "#00796b",
     "share_target": {
-      "action": "/roll-to-roll/share-target/",
+      "action": "/roll-2-roll/share-target/",
       "method": "GET",
       "params": {
         "title": "title",
