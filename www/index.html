@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web app for rolls to find its better half">
+  <meta name="keywords" content="Web Capabilities, PWA">
+  <meta name="author" content="Alex González">
+  <meta name="theme-color" content="#00796b" />
+  <title>Roll 2 Roll</title>
+  <link rel="icon" href="/assets/images/roll_together.ico" type="image/x-icon" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/logo/roll_together_57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/logo/roll_together_60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/logo/roll_together_72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/logo/roll_together_76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/logo/roll_together_114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/logo/roll_together_120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/logo/roll_together_144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/logo/roll_together_152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo/roll_together_180x180.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <header class="mdc-top-app-bar header__container">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button>
+        <span class="mdc-top-app-bar__title">Roll 2 Roll</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+          aria-label="Download">file_download</button>
+        <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+          aria-label="Print this page">print</button>
+        <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+          aria-label="Bookmark this page">bookmark</button> -->
+      </section>
+    </div>
+  </header>
+  <section class="roll__container">
+
+  </section>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(registration => {
+          console.log(registration);
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+<script src="main.js"></script></body>
+
+</html>
